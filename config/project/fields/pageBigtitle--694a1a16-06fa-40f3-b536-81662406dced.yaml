@@ -1,0 +1,19 @@
+columnSuffix: kxqmavyg
+contentColumnType: string(200)
+fieldGroup: 4b6e5ce2-c3cb-4db7-8de8-600740c8ad7d # pages
+handle: pageBigtitle
+instructions: null
+name: 'Big title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 50
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

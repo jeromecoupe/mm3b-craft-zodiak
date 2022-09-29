@@ -1,0 +1,211 @@
+{# template à étendre #}
+{% extends "_layouts/base.twig" %}
+
+{# 
+Craft sait que nous sommes sur une route qui correspond à une et une seule entry (la homepage). Il va vous donner automatiquement une variable "entry" que vous pouvez utiliser directement. 
+
+Vous pourriez aussi créer cette variable "entry" explicitement et lui assigner la seule entrée craft de la section homePage. Craft le fait à votre place en rendant disponible une variable "entry" puisque la route / l'URL correspond à une section de type single avec une seule entry.
+
+{% set entry = craft.entries()
+  .section("homePage")
+  .one() %}
+#}
+
+{# contenu du block content du template étendu par {% extends %} (ligne 2) #}
+{% block content %}
+
+    <div class="c-pagesection  c-pagesection--brand">
+      <div class="l-container">
+        <h1 class="c-pagetitle">{{ entry.pageBigtitle }}</h1>
+        <div class="c-homeintro">
+          <p>{{ entry.homepageIntro }}</p>
+          <p><a class="c-ctalink  c-ctalink--invert" href="/projects/">
+            Our projects <svg aria-hidden="true" width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.20711 0.292908L12.4142 5.50001L7.20711 10.7071L5.79289 9.29291L8.58579 6.50001H0V4.50001H8.58579L5.79289 1.70712L7.20711 0.292908Z" fill="currentColor"/>
+</svg>
+
+          </a></p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="c-banner">
+      {# les champs relationnels retournent toujours un tableau, il faut donc prenre le premier élément de ce dernier avec ".one" #}
+      {% set img = entry.pageBanner.one() %}
+      {# on teste pour savoir si une image existe bien avant d'afficher le code #}
+      {% if img %}
+        {# passer un objet à la fonction getUrl() avec les dimensions permet à Craft de générer des images de plusieurs tailles sur base d'une image source. Ici on génère une image de 800px de large et de 600px de haut, une autre de 1024px / 768px et une dernière de 1500px / 1125px  #}
+        <img src="{{ img.getUrl({ width: 800, height: 600 }) }}"
+             srcset="{{ img.getUrl({ width: 800, height: 600 }) }} 800w,
+                     {{ img.getUrl({ width: 1024, height: 768 }) }} 1024w,
+                     {{ img.getUrl({ width: 1500, height: 1125 }) }} 1500w,"
+             sizes="100vw"
+             loading="lazy"
+             decoding="async"
+             width="1500"
+             height="844"
+             alt="people in the office">
+      {% endif %}
+    </div>
+    <div class="c-pagesection">
+      <div class="l-container">
+
+          <div class="l-split">
+            <h2 class="c-smalltitle">{{ entry.homepageWedoTitle }}</h2>
+            <div>
+
+              <p class="c-intro">{{ entry.homepageWedoIntro }}</p>
+
+              <ul class="c-vlist  c-vlist--m">
+                <li>
+                  <article class="c-service">
+                    <h3 class="c-service__title">Discovery and planning</h3>
+                    <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
+                  </article>
+                </li>
+                <li>
+                  <article class="c-service">
+                    <h3 class="c-service__title">Design and prototypes</h3>
+                    <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
+                  </article>
+                </li>
+                <li>
+                  <article class="c-service">
+                    <h3 class="c-service__title">Code and interactivity</h3>
+                    <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
+                  </article>
+                </li>
+                <li>
+                  <article class="c-service">
+                    <h3 class="c-service__title">Ongoing support</h3>
+                    <p class="c-service__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem labore ut, quas nemo ad fuga rerum iusto, quidem veritatis deserunt quos perferendis consequatur doloribus reprehenderit magni cumque omnis! Modi, quam.</p>
+                  </article>
+                </li>
+              </ul>
+            
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <div class="c-pagesection">
+      <div class="l-container">
+
+        <div class="l-split">
+          <h2 class="c-smalltitle">{{ entry.homepageProjectsTitle }}</h2>
+          <div>
+            <p class="c-intro">{{ entry.homepageProjectsIntro }}</p>
+          </div>
+        </div>
+
+        <ul class="l-grid  l-grid--2cols@small  l-grid--4cols@large  u-mb-xl">
+          <li>
+            
+  <article class="c-projectcard">
+    <a class="c-projectcard__link" href="/projects/detail/">
+      <div class="c-projectcard__media">
+        <img src="https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?fit=crop&w=450&h=600"
+             srcset="https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?fit=crop&w=450&h=600 450w,
+                     https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?fit=crop&w=600&h=800 600w"
+             sizes="(min-width: 1500px) 345px,
+                    (min-width: 1024px) 25vw
+                    (min-width: 500px) 50vw,
+                    100vw"
+             class="o-fluidimg"
+             width="600"
+             height="800"
+             alt="">
+      </div>
+      <div class="c-projectcard__body">
+        <h3 class="c-projectcard__title">Institut des Arts de Diffusion</h3>
+        <p class="c-projectcard__tagline">Rebranding an art school</p>
+      </div>
+    </a>
+  </article>
+
+          </li>
+          <li>
+            
+  <article class="c-projectcard">
+    <a class="c-projectcard__link" href="/projects/detail/">
+      <div class="c-projectcard__media">
+        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?fit=crop&w=450&h=600"
+              srcset="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?fit=crop&w=450&h=600 450w,
+                      https://images.unsplash.com/photo-1529139574466-a303027c1d8b?fit=crop&w=600&h=800 600w"
+              sizes="(min-width: 1500px) 345px,
+                    (min-width: 1024px) 25vw
+                    (min-width: 500px) 50vw,
+                    100vw"
+              class="o-fluidimg"
+              width="600"
+              height="800"
+              alt="">
+      </div>
+      <div class="c-projectcard__body">
+        <h3 class="c-projectcard__title">Name of the project</h3>
+        <p class="c-projectcard__tagline">Short Description</p>
+      </div>
+    </a>
+  </article>
+
+          </li>
+          <li>
+            
+  <article class="c-projectcard">
+    <a class="c-projectcard__link" href="/projects/detail/">
+      <div class="c-projectcard__media">
+        <img src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?fit=crop&w=450&h=600"
+              srcset="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?fit=crop&w=450&h=600 450w,
+                      https://images.unsplash.com/photo-1575224300306-1b8da36134ec?fit=crop&w=600&h=800 600w"
+              sizes="(min-width: 1500px) 345px,
+                    (min-width: 1024px) 25vw
+                    (min-width: 500px) 50vw,
+                    100vw"
+              class="o-fluidimg"
+              width="600"
+              height="800"
+              alt="">
+      </div>
+      <div class="c-projectcard__body">
+        <h3 class="c-projectcard__title">Name of the project</h3>
+        <p class="c-projectcard__tagline">Short Description</p>
+      </div>
+    </a>
+  </article>
+
+          </li>
+          <li>
+            
+  <article class="c-projectcard">
+    <a class="c-projectcard__link" href="/projects/detail/">
+      <div class="c-projectcard__media">
+        <img src="https://images.unsplash.com/photo-1614145121029-83a9f7b68bf4?fit=crop&w=450&h=600"
+              srcset="https://images.unsplash.com/photo-1614145121029-83a9f7b68bf4?fit=crop&w=450&h=600 450w,
+                      https://images.unsplash.com/photo-1614145121029-83a9f7b68bf4?fit=crop&w=600&h=800 600w"
+              sizes="(min-width: 1500px) 345px,
+                    (min-width: 1024px) 25vw
+                    (min-width: 500px) 50vw,
+                    100vw"
+              class="o-fluidimg"
+              width="600"
+              height="800"
+              alt="">
+      </div>
+      <div class="c-projectcard__body">
+        <h3 class="c-projectcard__title">Name of the project</h3>
+        <p class="c-projectcard__tagline">Short Description</p>
+      </div>
+    </a>
+  </article>
+
+          </li>
+        </ul>
+        <p><a class="c-ctalink" href="/projects/">More projects <svg aria-hidden="true" width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.20711 0.292908L12.4142 5.50001L7.20711 10.7071L5.79289 9.29291L8.58579 6.50001H0V4.50001H8.58579L5.79289 1.70712L7.20711 0.292908Z" fill="currentColor"/>
+</svg>
+</a></p>
+
+
+      </div>
+    </div>
+{% endblock %}

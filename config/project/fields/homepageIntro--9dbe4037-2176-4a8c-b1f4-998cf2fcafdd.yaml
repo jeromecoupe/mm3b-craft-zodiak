@@ -1,0 +1,19 @@
+columnSuffix: hwqgqnco
+contentColumnType: string(1200)
+fieldGroup: c35f1271-3443-46b5-8ea6-da21707ff837 # homepage
+handle: homepageIntro
+instructions: null
+name: Intro
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 300
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

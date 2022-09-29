@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Zodiak Craft'
+primary: true
+siteGroup: f88162e2-7556-45b7-8e60-ee52abadd023 # Zodiak Craft
+sortOrder: 1

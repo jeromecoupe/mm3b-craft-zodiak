@@ -1,0 +1,42 @@
+dateModified: 1664451603
+email:
+  fromEmail: jercoupe@gmail.com
+  fromName: 'Zodiak Craft'
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  bannersImages:
+    hasUrls: true
+    name: 'Banner Images'
+    settings:
+      path: '@assetsBasePath/banners'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/banners/'
+meta:
+  __names__:
+    0ad111f3-a6dc-4cf9-9bef-4be1508c02ed: 'Home page' # Home page
+    3c1478f1-bcf6-459b-8684-65df9d38eb78: Title # Title
+    4b6e5ce2-c3cb-4db7-8de8-600740c8ad7d: pages # pages
+    7ca4fad4-ddb0-4591-9544-6fd60be94386: Intro # Intro
+    7e8bdc04-0bb6-4def-b62f-349d7766c475: Intro # Intro
+    9dbe4037-2176-4a8c-b1f4-998cf2fcafdd: Intro # Intro
+    80cc93b0-0439-4e82-a632-4ab3b951e8d6: 'Home page' # Home page
+    694a1a16-06fa-40f3-b536-81662406dced: 'Big title' # Big title
+    3409f5cd-9756-4836-abd4-a07c4ab48248: Title # Title
+    897265d9-bda0-4fd7-a7c8-d031e2ec0ade: 'Banners Images' # Banners Images
+    bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: 'Zodiak Craft' # Zodiak Craft
+    c35f1271-3443-46b5-8ea6-da21707ff837: homepage # homepage
+    f08509ef-a623-4169-a552-d925d0706204: Common # Common
+    f88162e2-7556-45b7-8e60-ee52abadd023: 'Zodiak Craft' # Zodiak Craft
+    fc51580f-28ae-48d2-b444-670bb3cd2eac: Banner # Banner
+system:
+  edition: solo
+  live: true
+  name: 'Zodiak Craft'
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
