@@ -1,0 +1,24 @@
+{# 
+  Craft regarde l'URL (Routing)
+  - il sait d'après l'URL que vous affichez le detail d'une entry
+  - normal, on lui a donné la structure des URLs en définissant la section projets
+  - comme il est gentil, il vous créé automatiquement un objet "entry" auquel tous les champs sont attachés
+#}
+
+{# layout #}
+{% extends "_layouts/base.twig" %}
+
+{# block content #}
+{% block content %}
+
+  {% set img = entry.projectImage.one() %}
+  {% if img %}
+  <div class="c-banner">
+    <img src="{{ img.getUrl({ width: 1500, height: 1125 }) }}" alt="">
+  </div>
+  {% endif %}
+
+  <h1>{{ entry.title }}</h1>
+  <p>{{ entry.projectShortDescription }}</p>
+  </div>
+{% endblock %}

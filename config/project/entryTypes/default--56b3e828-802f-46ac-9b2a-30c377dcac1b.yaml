@@ -1,0 +1,67 @@
+fieldLayouts:
+  51f5b09d-a820-4e2a-9367-2cb1f13f6f3c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 8d2ee940-2eba-4141-9dda-82288d99eb01 # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 195ef34c-7472-4f8c-9a81-83f923d77faf
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 85134406-d742-4d71-8245-556c13f1574f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: c50e71d2-363e-4e98-b4d8-75c91be685c0 # Short Description
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9940c8f0-d176-4e27-8238-f2668e20f61d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contenu
+        uid: 3d9fea44-b0ae-4628-96dd-1f94e965888a
+        userCondition: null
+handle: default
+hasTitleField: true
+name: 'Par défaut'
+section: 6aafa194-7f45-473e-b720-51bcc8fe547e # Projects
+sortOrder: 1
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

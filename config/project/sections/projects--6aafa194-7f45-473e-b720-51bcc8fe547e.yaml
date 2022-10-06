@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: projects
+name: Projects
+propagationMethod: all
+siteSettings:
+  bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: # Zodiak Craft
+    enabledByDefault: true
+    hasUrls: true
+    template: projects/_entry.twig
+    uriFormat: 'projects/{slug}'
+type: channel

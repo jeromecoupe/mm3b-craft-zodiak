@@ -1,4 +1,22 @@
-dateModified: 1664451603
+dateModified: 1665050654
+elementSources:
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      key: singles
+      type: native
+    -
+      heading: Projets
+      type: heading
+    -
+      disabled: false
+      key: 'section:6aafa194-7f45-473e-b720-51bcc8fe547e' # Projects
+      tableAttributes:
+        - 'field:8d2ee940-2eba-4141-9dda-82288d99eb01' # Image
+        - link
+      type: native
 email:
   fromEmail: jercoupe@gmail.com
   fromName: 'Zodiak Craft'
@@ -11,23 +29,36 @@ fs:
       path: '@assetsBasePath/banners'
     type: craft\fs\Local
     url: '@assetsBaseUrl/banners/'
+  projectsImages:
+    hasUrls: true
+    name: 'Projects Images'
+    settings:
+      path: '@assetsBasePath/projects_images'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/projects_images'
 meta:
   __names__:
     0ad111f3-a6dc-4cf9-9bef-4be1508c02ed: 'Home page' # Home page
+    0dfcc7d3-fa9f-4193-bc32-a012d780928a: 'Projects Images' # Projects Images
     3c1478f1-bcf6-459b-8684-65df9d38eb78: Title # Title
     4b6e5ce2-c3cb-4db7-8de8-600740c8ad7d: pages # pages
+    6aafa194-7f45-473e-b720-51bcc8fe547e: Projects # Projects
     7ca4fad4-ddb0-4591-9544-6fd60be94386: Intro # Intro
     7e8bdc04-0bb6-4def-b62f-349d7766c475: Intro # Intro
+    8d2ee940-2eba-4141-9dda-82288d99eb01: Image # Image
     9dbe4037-2176-4a8c-b1f4-998cf2fcafdd: Intro # Intro
+    56b3e828-802f-46ac-9b2a-30c377dcac1b: 'Par défaut' # Par défaut
     80cc93b0-0439-4e82-a632-4ab3b951e8d6: 'Home page' # Home page
     694a1a16-06fa-40f3-b536-81662406dced: 'Big title' # Big title
     3409f5cd-9756-4836-abd4-a07c4ab48248: Title # Title
     897265d9-bda0-4fd7-a7c8-d031e2ec0ade: 'Banners Images' # Banners Images
     bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: 'Zodiak Craft' # Zodiak Craft
     c35f1271-3443-46b5-8ea6-da21707ff837: homepage # homepage
+    c50e71d2-363e-4e98-b4d8-75c91be685c0: 'Short Description' # Short Description
     f08509ef-a623-4169-a552-d925d0706204: Common # Common
     f88162e2-7556-45b7-8e60-ee52abadd023: 'Zodiak Craft' # Zodiak Craft
     fc51580f-28ae-48d2-b444-670bb3cd2eac: Banner # Banner
+    ff26caa9-dbab-4514-b242-b2284d2d27df: projects # projects
 system:
   edition: solo
   live: true

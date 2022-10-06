@@ -33,6 +33,7 @@ Vous pourriez aussi créer cette variable "entry" explicitement et lui assigner 
       {# les champs relationnels retournent toujours un tableau, il faut donc prenre le premier élément de ce dernier avec ".one" #}
       {% set img = entry.pageBanner.one() %}
       {# on teste pour savoir si une image existe bien avant d'afficher le code #}
+      {{ img.url }}
       {% if img %}
         {# passer un objet à la fonction getUrl() avec les dimensions permet à Craft de générer des images de plusieurs tailles sur base d'une image source. Ici on génère une image de 800px de large et de 600px de haut, une autre de 1024px / 768px et une dernière de 1500px / 1125px  #}
         <img src="{{ img.getUrl({ width: 800, height: 600 }) }}"
@@ -98,108 +99,52 @@ Vous pourriez aussi créer cette variable "entry" explicitement et lui assigner 
           </div>
         </div>
 
-        <ul class="l-grid  l-grid--2cols@small  l-grid--4cols@large  u-mb-xl">
-          <li>
-            
-  <article class="c-projectcard">
-    <a class="c-projectcard__link" href="/projects/detail/">
-      <div class="c-projectcard__media">
-        <img src="https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?fit=crop&w=450&h=600"
-             srcset="https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?fit=crop&w=450&h=600 450w,
-                     https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?fit=crop&w=600&h=800 600w"
-             sizes="(min-width: 1500px) 345px,
-                    (min-width: 1024px) 25vw
-                    (min-width: 500px) 50vw,
-                    100vw"
-             class="o-fluidimg"
-             width="600"
-             height="800"
-             alt="">
-      </div>
-      <div class="c-projectcard__body">
-        <h3 class="c-projectcard__title">Institut des Arts de Diffusion</h3>
-        <p class="c-projectcard__tagline">Rebranding an art school</p>
-      </div>
-    </a>
-  </article>
+        {#
+          Afficher les 4 derniers projets
+          - choper 4 entries dans les projets classés par date de publication
+          - faire une boucle
+            - la première fois qu'on passe dedans, afficher le début de <ul>
+            - la dernière fois qu'on passe dedans, afficher la fin de </ul>
+            - toujours afficher un <li></li> avec le projet au milieu
+        #}
 
-          </li>
-          <li>
-            
-  <article class="c-projectcard">
-    <a class="c-projectcard__link" href="/projects/detail/">
-      <div class="c-projectcard__media">
-        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?fit=crop&w=450&h=600"
-              srcset="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?fit=crop&w=450&h=600 450w,
-                      https://images.unsplash.com/photo-1529139574466-a303027c1d8b?fit=crop&w=600&h=800 600w"
-              sizes="(min-width: 1500px) 345px,
-                    (min-width: 1024px) 25vw
-                    (min-width: 500px) 50vw,
-                    100vw"
-              class="o-fluidimg"
-              width="600"
-              height="800"
-              alt="">
-      </div>
-      <div class="c-projectcard__body">
-        <h3 class="c-projectcard__title">Name of the project</h3>
-        <p class="c-projectcard__tagline">Short Description</p>
-      </div>
-    </a>
-  </article>
+        {# aller chercher toutes les entries qui
+          - appartiennent à la section 'projects'
+          - les classer par dates de publication descendantes
+          - limiter ls résultats à 4
+          - prendre tt les entries .all() #}
 
-          </li>
-          <li>
-            
-  <article class="c-projectcard">
-    <a class="c-projectcard__link" href="/projects/detail/">
-      <div class="c-projectcard__media">
-        <img src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?fit=crop&w=450&h=600"
-              srcset="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?fit=crop&w=450&h=600 450w,
-                      https://images.unsplash.com/photo-1575224300306-1b8da36134ec?fit=crop&w=600&h=800 600w"
-              sizes="(min-width: 1500px) 345px,
-                    (min-width: 1024px) 25vw
-                    (min-width: 500px) 50vw,
-                    100vw"
-              class="o-fluidimg"
-              width="600"
-              height="800"
-              alt="">
-      </div>
-      <div class="c-projectcard__body">
-        <h3 class="c-projectcard__title">Name of the project</h3>
-        <p class="c-projectcard__tagline">Short Description</p>
-      </div>
-    </a>
-  </article>
+        {% set latestProjects = craft.entries()
+          .section("projects")
+          .orderBy("postDate DESC")
+          .limit(4)
+          .all() %}
 
-          </li>
-          <li>
-            
-  <article class="c-projectcard">
-    <a class="c-projectcard__link" href="/projects/detail/">
-      <div class="c-projectcard__media">
-        <img src="https://images.unsplash.com/photo-1614145121029-83a9f7b68bf4?fit=crop&w=450&h=600"
-              srcset="https://images.unsplash.com/photo-1614145121029-83a9f7b68bf4?fit=crop&w=450&h=600 450w,
-                      https://images.unsplash.com/photo-1614145121029-83a9f7b68bf4?fit=crop&w=600&h=800 600w"
-              sizes="(min-width: 1500px) 345px,
-                    (min-width: 1024px) 25vw
-                    (min-width: 500px) 50vw,
-                    100vw"
-              class="o-fluidimg"
-              width="600"
-              height="800"
-              alt="">
-      </div>
-      <div class="c-projectcard__body">
-        <h3 class="c-projectcard__title">Name of the project</h3>
-        <p class="c-projectcard__tagline">Short Description</p>
-      </div>
-    </a>
-  </article>
+        {# on boucle sur les 4 projets #}
+        {% for item in latestProjects %}
+          {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--4cols@large  u-mb-xl">{% endif %}
 
-          </li>
-        </ul>
+            <li>
+            
+              {# 
+                On inclu un composant pour pouvoir le réutiliser
+                - Ce composant doit recevoir 4 parametres (titre, description, image, url)
+                - Il doit idéalement être totalement indépendant de la page dans laquelle il est utilisé
+                - On utilise "with" pour lui passer un objet qui contient tous ses parametres
+                - On utilise "only" pour lui donner UNIQUEMENT accès à ces 4 paramètres et on lui coupe l'acces aux variables du contexte general (lers includes et les extends on accès au même ensemble de variables)
+              #}
+
+              {% include "_components/projectCard.twig" with {
+                title: item.title,
+                description: item.projectShortDescription,
+                image: item.projectImage.one(),
+                url: item.url
+              } only %}
+
+            </li>
+          {% if loop.last %}</ul>{% endif %}
+        {% endfor %}
+
         <p><a class="c-ctalink" href="/projects/">More projects <svg aria-hidden="true" width="13" height="11" viewBox="0 0 13 11" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.20711 0.292908L12.4142 5.50001L7.20711 10.7071L5.79289 9.29291L8.58579 6.50001H0V4.50001H8.58579L5.79289 1.70712L7.20711 0.292908Z" fill="currentColor"/>
 </svg>
