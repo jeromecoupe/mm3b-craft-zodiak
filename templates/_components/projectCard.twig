@@ -14,9 +14,7 @@ template
 <article class="c-projectcard">
   <a class="c-projectcard__link" href="{{ url }}">
     <div class="c-projectcard__media">
-      {# Dans craft les champs relationnels renvoient TOUJOURS UN TABLEAU D'OBJETS
-        - dans ce cas-ci nous n'avons qu'un seul item (une image)
-        - on utilise .one() ou collect().first() pour aller chercher ce premier item #}
+
       {% if image %}
         <img src="{{ image.getUrl({ width: 450, height: 600 }) }}"
             srcset="{{ image.getUrl({ width: 450, height: 600 }) }} 450w,

@@ -1,0 +1,125 @@
+field: 8830f2a6-b3db-4b49-9842-13a44ae5491e # project body
+fieldLayouts:
+  eccdb142-325a-4352-b4a9-7ccbeccc8aba:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: d1427b85-dcab-4643-978f-dff265723cbc # Service Video
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eb79d4f4-01da-426a-91ae-afdc34f7c420
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6db1878a-7113-4d29-9fc6-9fbf3ab92c6d # Video ID
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ec5e1577-595d-4d70-8f83-9fbf6b49d551
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: d1eedcd7-399c-4e68-aeb9-780efad56703 # Video Caption
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1b01aa25-23d8-4c59-aa36-4c99ffa9bd80
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c33fda74-db52-4aae-9339-97470b389066
+        userCondition: null
+fields:
+  6db1878a-7113-4d29-9fc6-9fbf3ab92c6d: # Video ID
+    columnSuffix: rxemznqh
+    contentColumnType: string(512)
+    fieldGroup: null
+    handle: mxVideoId
+    instructions: null
+    name: 'Video ID'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 128
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d1eedcd7-399c-4e68-aeb9-780efad56703: # Video Caption
+    columnSuffix: kiewzcvg
+    contentColumnType: string(1020)
+    fieldGroup: null
+    handle: mxVideoCaption
+    instructions: null
+    name: 'Video Caption'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 255
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d1427b85-dcab-4643-978f-dff265723cbc: # Service Video
+    columnSuffix: ymgxgdjc
+    contentColumnType: string
+    fieldGroup: null
+    handle: mxVideoService
+    instructions: null
+    name: 'Service Video'
+    searchable: false
+    settings:
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Vimeo
+            -
+              - value
+              - vimeo
+            -
+              - default
+              - ''
+        -
+          __assoc__:
+            -
+              - label
+              - Youtube
+            -
+              - value
+              - youtube
+            -
+              - default
+              - '1'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+handle: mxblockVideo
+name: Video
+sortOrder: 2

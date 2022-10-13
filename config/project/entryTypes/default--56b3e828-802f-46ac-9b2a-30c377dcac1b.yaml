@@ -54,6 +54,30 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: d9dd4ea9-1687-4f88-81c1-aaabd2daf761 # Intro
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 02ef290a-bc80-4b7e-9cb4-f71cf59d6314
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8830f2a6-b3db-4b49-9842-13a44ae5491e # project body
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 032b35f2-ad4a-47b8-aeee-30a27cdd3c28
+            userCondition: null
+            warning: null
+            width: 100
         name: Contenu
         uid: 3d9fea44-b0ae-4628-96dd-1f94e965888a
         userCondition: null

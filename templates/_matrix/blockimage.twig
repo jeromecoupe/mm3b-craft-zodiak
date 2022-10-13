@@ -1,0 +1,13 @@
+{# --------------------------
+variables
+-------------------------- #}
+{% set img = img ?? null %}
+{% set caption = caption ?? null %}
+
+{# --------------------------
+variables
+-------------------------- #}
+{% if img %}
+  <img src="{{ img.getUrl() }}" alt="">
+{% endif %}
+<p>{{ caption }}</p>

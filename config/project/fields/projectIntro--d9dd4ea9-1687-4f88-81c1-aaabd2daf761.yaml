@@ -1,0 +1,27 @@
+columnSuffix: jrjpavvk
+contentColumnType: text
+fieldGroup: ff26caa9-dbab-4514-b242-b2284d2d27df # projects
+handle: projectIntro
+instructions: null
+name: Intro
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: ''
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: null
+  purifyHtml: true
+  redactorConfig: Simple.json
+  removeEmptyTags: false
+  removeInlineStyles: false
+  removeNbsp: false
+  showHtmlButtonForNonAdmins: false
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

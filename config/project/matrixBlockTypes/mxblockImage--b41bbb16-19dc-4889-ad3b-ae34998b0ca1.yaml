@@ -1,0 +1,106 @@
+field: 8830f2a6-b3db-4b49-9842-13a44ae5491e # project body
+fieldLayouts:
+  8324d11b-cdb5-4099-b225-7c644ef11ccf:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 688a85b1-311c-4b87-8606-403a0291f62b # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d6088c1d-4743-474d-8b02-21b3c19335e6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 34b5023c-f01f-462d-a4ee-1d71f8cf89fd # Image Caption
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6b419d32-0636-437e-9c31-8a6a4343b488
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 63286baa-e5fd-47ec-821a-e457a09dd4a9
+        userCondition: null
+fields:
+  34b5023c-f01f-462d-a4ee-1d71f8cf89fd: # Image Caption
+    columnSuffix: wgxlkiqx
+    contentColumnType: string(1020)
+    fieldGroup: null
+    handle: mxImageCaption
+    instructions: null
+    name: 'Image Caption'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 255
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  688a85b1-311c-4b87-8606-403a0291f62b: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: mxImageFile
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: false
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:897265d9-bda0-4fd7-a7c8-d031e2ec0ade' # Banners Images
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: true
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:0dfcc7d3-fa9f-4193-bc32-a012d780928a' # Projects Images
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: large
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: mxblockImage
+name: Image
+sortOrder: 1

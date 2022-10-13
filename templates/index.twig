@@ -133,6 +133,10 @@ Vous pourriez aussi créer cette variable "entry" explicitement et lui assigner 
                 - On utilise "only" pour lui donner UNIQUEMENT accès à ces 4 paramètres et on lui coupe l'acces aux variables du contexte general (lers includes et les extends on accès au même ensemble de variables)
               #}
 
+              {# Dans craft les champs relationnels renvoient TOUJOURS UN TABLEAU D'OBJETS
+              - dans ce cas-ci nous n'avons qu'un seul item (une image)
+              - on utilise .one() ou collect().first() pour aller chercher ce premier item #}
+
               {% include "_components/projectCard.twig" with {
                 title: item.title,
                 description: item.projectShortDescription,

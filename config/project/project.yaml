@@ -1,4 +1,4 @@
-dateModified: 1665050654
+dateModified: 1665651353
 elementSources:
   craft\elements\Entry:
     -
@@ -40,25 +40,42 @@ meta:
   __names__:
     0ad111f3-a6dc-4cf9-9bef-4be1508c02ed: 'Home page' # Home page
     0dfcc7d3-fa9f-4193-bc32-a012d780928a: 'Projects Images' # Projects Images
+    2ca6ab5f-6f9a-4382-9148-3c4b447d8061: Texte # Texte
     3c1478f1-bcf6-459b-8684-65df9d38eb78: Title # Title
     4b6e5ce2-c3cb-4db7-8de8-600740c8ad7d: pages # pages
     6aafa194-7f45-473e-b720-51bcc8fe547e: Projects # Projects
+    6db1878a-7113-4d29-9fc6-9fbf3ab92c6d: 'Video ID' # Video ID
     7ca4fad4-ddb0-4591-9544-6fd60be94386: Intro # Intro
     7e8bdc04-0bb6-4def-b62f-349d7766c475: Intro # Intro
     8d2ee940-2eba-4141-9dda-82288d99eb01: Image # Image
     9dbe4037-2176-4a8c-b1f4-998cf2fcafdd: Intro # Intro
+    34b5023c-f01f-462d-a4ee-1d71f8cf89fd: 'Image Caption' # Image Caption
     56b3e828-802f-46ac-9b2a-30c377dcac1b: 'Par défaut' # Par défaut
     80cc93b0-0439-4e82-a632-4ab3b951e8d6: 'Home page' # Home page
+    0309a6b9-b120-4a62-a1ae-67fee16b1d3d: Title # Title
+    688a85b1-311c-4b87-8606-403a0291f62b: Image # Image
     694a1a16-06fa-40f3-b536-81662406dced: 'Big title' # Big title
     3409f5cd-9756-4836-abd4-a07c4ab48248: Title # Title
+    8830f2a6-b3db-4b49-9842-13a44ae5491e: 'project body' # project body
     897265d9-bda0-4fd7-a7c8-d031e2ec0ade: 'Banners Images' # Banners Images
+    b41bbb16-19dc-4889-ad3b-ae34998b0ca1: Image # Image
     bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: 'Zodiak Craft' # Zodiak Craft
     c35f1271-3443-46b5-8ea6-da21707ff837: homepage # homepage
     c50e71d2-363e-4e98-b4d8-75c91be685c0: 'Short Description' # Short Description
+    d1eedcd7-399c-4e68-aeb9-780efad56703: 'Video Caption' # Video Caption
+    d9dd4ea9-1687-4f88-81c1-aaabd2daf761: Intro # Intro
+    d1427b85-dcab-4643-978f-dff265723cbc: 'Service Video' # Service Video
+    df8aff31-ccae-4e6c-9049-58534ce8f646: Text # Text
     f08509ef-a623-4169-a552-d925d0706204: Common # Common
     f88162e2-7556-45b7-8e60-ee52abadd023: 'Zodiak Craft' # Zodiak Craft
+    fb32a98b-9909-4df5-b727-e7d4962f453d: Video # Video
     fc51580f-28ae-48d2-b444-670bb3cd2eac: Banner # Banner
     ff26caa9-dbab-4514-b242-b2284d2d27df: projects # projects
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true

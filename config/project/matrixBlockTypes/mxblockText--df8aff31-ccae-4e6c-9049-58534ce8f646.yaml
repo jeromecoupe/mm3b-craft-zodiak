@@ -1,0 +1,86 @@
+field: 8830f2a6-b3db-4b49-9842-13a44ae5491e # project body
+fieldLayouts:
+  1cdaa424-b8b5-477f-90f7-8e15617c431c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 0309a6b9-b120-4a62-a1ae-67fee16b1d3d # Title
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f44d2101-718f-47fa-bd91-8ad16ccf32bc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 2ca6ab5f-6f9a-4382-9148-3c4b447d8061 # Texte
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 87960af8-c814-4fca-b658-8acf7a29cd0e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f5dfe031-3e99-4457-99f0-aa31253ef911
+        userCondition: null
+fields:
+  2ca6ab5f-6f9a-4382-9148-3c4b447d8061: # Texte
+    columnSuffix: mbvobere
+    contentColumnType: text
+    fieldGroup: null
+    handle: mxTextTxt
+    instructions: null
+    name: Texte
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: ''
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: null
+      purifyHtml: true
+      redactorConfig: Simple.json
+      removeEmptyTags: false
+      removeInlineStyles: false
+      removeNbsp: false
+      showHtmlButtonForNonAdmins: false
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
+  0309a6b9-b120-4a62-a1ae-67fee16b1d3d: # Title
+    columnSuffix: lhhdlqbm
+    contentColumnType: string(512)
+    fieldGroup: null
+    handle: mxTextTitle
+    instructions: null
+    name: Title
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: 128
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: mxblockText
+name: Text
+sortOrder: 3
