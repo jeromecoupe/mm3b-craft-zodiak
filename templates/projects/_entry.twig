@@ -6,6 +6,12 @@
 #}
 
 {# layout #}
+{# 
+- en examinant l'URL (Routing), Craft sait qu'elle correspond à une entry de la section projets (on lui a donné la structure de ces URL en définissant la section)
+- Craft met automatiquement à notre disposition une variable "entry" qui est un objet contenant tous les champs définis pour les éléments de la section projets.  
+#}
+
+{# layout to extend #}
 {% extends "_layouts/base.twig" %}
 
 {# block content #}
@@ -13,12 +19,22 @@
 
   {% set img = entry.projectImage.one() %}
   {% if img %}
-  <div class="c-banner">
-    <img src="{{ img.getUrl({ width: 1500, height: 1125 }) }}" alt="">
-  </div>
+    <div class="c-banner">
+      <img src="{{ img.getUrl({ width: 1500, height: 1125 }) }}" alt="">
+    </div>
   {% endif %}
 
-  <h1>{{ entry.title }}</h1>
-  <p>{{ entry.projectShortDescription }}</p>
+  <div class="c-pagesection">
+
+    <div class="c-casemodule">
+      <div class="l-container  l-container--copy">
+
+        <h1 class="c-h1 u-mb-xs">{{ entry.title }}</h1>
+        <p class="c-subtitle">{{ entry.projectShortDescription }}</p>
+      
+      </div>
+    </div>
+
   </div>
+
 {% endblock %}

@@ -33,7 +33,6 @@ Vous pourriez aussi créer cette variable "entry" explicitement et lui assigner 
       {# les champs relationnels retournent toujours un tableau, il faut donc prenre le premier élément de ce dernier avec ".one" #}
       {% set img = entry.pageBanner.one() %}
       {# on teste pour savoir si une image existe bien avant d'afficher le code #}
-      {{ img.url }}
       {% if img %}
         {# passer un objet à la fonction getUrl() avec les dimensions permet à Craft de générer des images de plusieurs tailles sur base d'une image source. Ici on génère une image de 800px de large et de 600px de haut, une autre de 1024px / 768px et une dernière de 1500px / 1125px  #}
         <img src="{{ img.getUrl({ width: 800, height: 600 }) }}"
