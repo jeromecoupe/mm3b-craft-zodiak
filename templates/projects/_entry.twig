@@ -61,7 +61,7 @@
 
       {# block image #}
       {% case "mxblockImage" %}
-        {% include "_matrix/blockvideo.twig" with {
+        {% include "_matrix/blockimage.twig" with {
           img: item.mxImageFile.one(),
           caption: item.mxImageCaption,
         } only %}

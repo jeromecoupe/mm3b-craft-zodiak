@@ -16,7 +16,10 @@ Vous pourriez aussi créer cette variable "entry" explicitement et lui assigner 
 
     <div class="c-pagesection  c-pagesection--brand">
       <div class="l-container">
-        <h1 class="c-pagetitle">{{ entry.pageBigtitle }}</h1>
+        {# remplacer les {{{ }}} par <span></span> #}
+        {% set htmlPageTitle = entry.pageBigtitle|replace({'{{{': '<span>', '}}}': '</span>'}) %}
+
+        <h1 class="c-pagetitle">{{ htmlPageTitle|raw }}</h1>
         <div class="c-homeintro">
           <p>{{ entry.homepageIntro }}</p>
           <p><a class="c-ctalink  c-ctalink--invert" href="/projects/">

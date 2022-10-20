@@ -17,6 +17,13 @@ variables
 template
 -------------------------- #}
 
-{# afficher l'iframe et caption #}
-<iframe src="{{ videoUrl }}"></iframe>
-<p>{{ caption }}</p>
+<div class="c-casemodule">
+  <div class="l-container">
+    <figure class="c-figure">
+      <div class="o-fluidvideo">
+        <iframe src="{{ videoUrl }}" width="1500" height="844"></iframe>
+      </div>
+      <figcaption class="c-figure__caption">{{ caption }}</figcaption>
+    </figure>
+  </div>
+</div>
