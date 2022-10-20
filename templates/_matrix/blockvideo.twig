@@ -4,6 +4,7 @@ variables
 {% set service = service ?? null %}
 {% set id = id ?? null %}
 {% set caption = caption ?? null %}
+{% set videoUrl = null %}
 
 {% if id and service %}
   {% set videoUrl = "https://www.youtube.com/embed/#{id}" %}
