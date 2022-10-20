@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: false
+handle: mainnav
+name: 'Main navigation'
+propagationMethod: all
+siteSettings:
+  bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: # Zodiak Craft
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 2dc53839-6af9-4c8f-96a9-e196822e78e7
+type: structure

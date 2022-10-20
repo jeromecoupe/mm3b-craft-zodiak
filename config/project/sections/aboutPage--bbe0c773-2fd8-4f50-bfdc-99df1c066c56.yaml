@@ -1,0 +1,12 @@
+defaultPlacement: end
+enableVersioning: true
+handle: aboutPage
+name: 'About Page'
+propagationMethod: all
+siteSettings:
+  bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: # Zodiak Craft
+    enabledByDefault: true
+    hasUrls: true
+    template: about/index.twig
+    uriFormat: about
+type: single

@@ -1,0 +1,48 @@
+fieldLayouts:
+  f417e8f2-370b-4fd4-97e6-850cff5a4484:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5c0fb115-45e4-48b7-8f57-a049812e69b3 # Facebook Url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 94adf0c3-6ce4-46d8-9438-1171376accd8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 999a2bfa-e35c-428b-8918-6edf6056c80d # Twitter Url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 855c6c2c-c5da-405c-a6b2-b90dbf6e2234
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 63660a67-33fa-414c-9fc1-23e27ce475f9 # Instagram Url
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a6adccb3-2e52-4b67-a499-ab8765364a22
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e37945e9-8fd3-402f-b8d4-4e4da4b03910
+        userCondition: null
+handle: socialmedia
+name: 'Social media'
+sortOrder: 1

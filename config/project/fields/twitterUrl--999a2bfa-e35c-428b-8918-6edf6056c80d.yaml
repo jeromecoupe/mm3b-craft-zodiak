@@ -1,0 +1,14 @@
+columnSuffix: pqphzcny
+contentColumnType: string(255)
+fieldGroup: 086529c0-74a3-4c9e-ab52-0485965c1095 # globals
+handle: twitterUrl
+instructions: null
+name: 'Twitter Url'
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

@@ -1,0 +1,67 @@
+fieldLayouts:
+  17168a58-54b5-4c27-8fc1-48c8ddba247d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: f1ed4d7d-cc08-445c-9954-6a26f2cd2030 # label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 355e387e-ea21-4d87-bb42-4e29beb150e9
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: faa3d051-bcd0-473e-8e6b-f099df52af16 # Entry
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e69ae7bc-7248-4956-95e9-5c731e7edfd8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: ac2d6aad-9a8b-4995-8e5e-50bf7c0adb93
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contenu
+        uid: 701fc858-95ec-489f-ae0e-9f3a5f1adec5
+        userCondition: null
+handle: default
+hasTitleField: false
+name: 'Par défaut'
+section: 6203612d-7fff-4ca5-9430-dbe3222dacc9 # Main navigation
+sortOrder: 1
+titleFormat: '{navLabel}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

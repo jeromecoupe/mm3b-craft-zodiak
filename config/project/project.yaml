@@ -1,11 +1,17 @@
-dateModified: 1665651353
+dateModified: 1666256933
 elementSources:
   craft\elements\Entry:
     -
       key: '*'
       type: native
     -
+      heading: Pages
+      type: heading
+    -
+      disabled: false
       key: singles
+      tableAttributes:
+        - link
       type: native
     -
       heading: Projets
@@ -16,6 +22,12 @@ elementSources:
       tableAttributes:
         - 'field:8d2ee940-2eba-4141-9dda-82288d99eb01' # Image
         - link
+      type: native
+    -
+      heading: Navigation
+      type: heading
+    -
+      key: 'section:6203612d-7fff-4ca5-9430-dbe3222dacc9' # Main navigation
       type: native
 email:
   fromEmail: jercoupe@gmail.com
@@ -42,32 +54,55 @@ meta:
     0dfcc7d3-fa9f-4193-bc32-a012d780928a: 'Projects Images' # Projects Images
     2ca6ab5f-6f9a-4382-9148-3c4b447d8061: Texte # Texte
     3c1478f1-bcf6-459b-8684-65df9d38eb78: Title # Title
+    3e8c1586-178a-414a-a1f0-7859936ecd1a: 'Projects page' # Projects page
     4b6e5ce2-c3cb-4db7-8de8-600740c8ad7d: pages # pages
+    5c0fb115-45e4-48b7-8f57-a049812e69b3: 'Facebook Url' # Facebook Url
     6aafa194-7f45-473e-b720-51bcc8fe547e: Projects # Projects
     6db1878a-7113-4d29-9fc6-9fbf3ab92c6d: 'Video ID' # Video ID
     7ca4fad4-ddb0-4591-9544-6fd60be94386: Intro # Intro
+    7db40305-94fa-4182-b9ec-92e6f65b35a4: 'Par défaut' # Par défaut
     7e8bdc04-0bb6-4def-b62f-349d7766c475: Intro # Intro
     8d2ee940-2eba-4141-9dda-82288d99eb01: Image # Image
     9dbe4037-2176-4a8c-b1f4-998cf2fcafdd: Intro # Intro
     34b5023c-f01f-462d-a4ee-1d71f8cf89fd: 'Image Caption' # Image Caption
     56b3e828-802f-46ac-9b2a-30c377dcac1b: 'Par défaut' # Par défaut
     80cc93b0-0439-4e82-a632-4ab3b951e8d6: 'Home page' # Home page
+    165ca52d-c6fc-40e8-9887-fbae6c318efe: 'Company name' # Company name
     0309a6b9-b120-4a62-a1ae-67fee16b1d3d: Title # Title
+    471dc572-2e82-440b-abd2-aec6e84255d3: 'About Page' # About Page
+    517b8a27-8132-48b9-90c7-f92ebeb16c52: Company # Company
+    581bd5ac-855e-4584-a8c1-21d5127b3f89: City # City
     688a85b1-311c-4b87-8606-403a0291f62b: Image # Image
     694a1a16-06fa-40f3-b536-81662406dced: 'Big title' # Big title
+    999a2bfa-e35c-428b-8918-6edf6056c80d: 'Twitter Url' # Twitter Url
     3409f5cd-9756-4836-abd4-a07c4ab48248: Title # Title
     8830f2a6-b3db-4b49-9842-13a44ae5491e: 'project body' # project body
+    63660a67-33fa-414c-9fc1-23e27ce475f9: 'Instagram Url' # Instagram Url
+    086529c0-74a3-4c9e-ab52-0485965c1095: globals # globals
+    87262a21-e415-4303-99dd-b6cf05760104: 'Social media' # Social media
     897265d9-bda0-4fd7-a7c8-d031e2ec0ade: 'Banners Images' # Banners Images
+    6203612d-7fff-4ca5-9430-dbe3222dacc9: 'Main navigation' # Main navigation
+    a8dd715f-61cc-4242-8979-a521bb3153e4: Street # Street
+    a9ea6874-b7c3-409e-bafa-f978616f563b: Number # Number
     b41bbb16-19dc-4889-ad3b-ae34998b0ca1: Image # Image
+    bbe0c773-2fd8-4f50-bfdc-99df1c066c56: 'About Page' # About Page
     bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: 'Zodiak Craft' # Zodiak Craft
+    c5b0ac11-7c01-420a-833c-e50ecb4371f0: 'General Email' # General Email
     c35f1271-3443-46b5-8ea6-da21707ff837: homepage # homepage
     c50e71d2-363e-4e98-b4d8-75c91be685c0: 'Short Description' # Short Description
     d1eedcd7-399c-4e68-aeb9-780efad56703: 'Video Caption' # Video Caption
     d9dd4ea9-1687-4f88-81c1-aaabd2daf761: Intro # Intro
+    d455c486-17de-49b7-acf3-ada7205ba599: mainnav # mainnav
     d1427b85-dcab-4643-978f-dff265723cbc: 'Service Video' # Service Video
+    d53147e0-6acd-439a-87f3-e5cc039c4b10: Postcode # Postcode
     df8aff31-ccae-4e6c-9049-58534ce8f646: Text # Text
+    eff068e8-e5ad-43d8-a24f-75d9e8c179e7: 'Phone Display' # Phone Display
     f08509ef-a623-4169-a552-d925d0706204: Common # Common
+    f1ed4d7d-cc08-445c-9954-6a26f2cd2030: label # label
+    f27f7986-a625-40ee-9f1c-113471f5c190: 'Phone Machines' # Phone Machines
+    f4255bdc-a1be-4f5f-8b1a-4ff363a027e8: 'Projects page' # Projects page
     f88162e2-7556-45b7-8e60-ee52abadd023: 'Zodiak Craft' # Zodiak Craft
+    faa3d051-bcd0-473e-8e6b-f099df52af16: Entry # Entry
     fb32a98b-9909-4df5-b727-e7d4962f453d: Video # Video
     fc51580f-28ae-48d2-b444-670bb3cd2eac: Banner # Banner
     ff26caa9-dbab-4514-b242-b2284d2d27df: projects # projects

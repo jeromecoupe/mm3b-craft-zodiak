@@ -1,0 +1,19 @@
+columnSuffix: eubilwul
+contentColumnType: string(256)
+fieldGroup: 086529c0-74a3-4c9e-ab52-0485965c1095 # globals
+handle: companyName
+instructions: null
+name: 'Company name'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 64
+  code: false
+  columnType: null
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

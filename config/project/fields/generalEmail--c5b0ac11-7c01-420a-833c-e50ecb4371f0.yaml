@@ -1,0 +1,12 @@
+columnSuffix: cbiudnof
+contentColumnType: string
+fieldGroup: 086529c0-74a3-4c9e-ab52-0485965c1095 # globals
+handle: generalEmail
+instructions: null
+name: 'General Email'
+searchable: false
+settings:
+  placeholder: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email
