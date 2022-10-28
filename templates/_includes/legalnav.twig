@@ -1,0 +1,21 @@
+{# 
+aller chercher toutes les entries qui sont dans le section `mainnav`
+- Craft nous renvoie un tableau d'objets. Chaque objet correspond à une entry
+ #}
+{% set legalnavItems = craft.entries()
+  .section("legalnav")
+  .all() %}
+
+{# boucler sur le tableau d'objets et afficher les champs #}
+{% for item in legalnavItems %}
+  {% if loop.first %}<ul class="c-footernav">{% endif %}
+
+    {# champs relationnel, craft renvoie toujours un tableau. On a besoin du seul et premier élément. Ici navFile vaut chaque fois le doc à laquelle on a lié dans la section footernav #}
+    {% set navFile = item.navFile.one() %}
+
+    <li class="c-footernav__item">
+      <a class="c-footernav__link" href="{{ navFile.url }}">{{ item.navLabel }}</a>
+    </li>
+
+  {% if loop.last %}</ul>{% endif %}
+{% endfor %}

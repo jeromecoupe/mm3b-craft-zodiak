@@ -1,0 +1,35 @@
+{# 
+aller chercher toutes les entries qui sont dans le section `mainnav`
+- Craft nous renvoie un tableau d'objets. Chaque objet correspond à une entry
+ #}
+{% set navItems = craft.entries()
+  .section("mainnav")
+  .all() %}
+
+{# boucler sur le tableau d'objets et afficher les champs #}
+{% for item in navItems %}
+  {% if loop.first %}<ul class="c-footernav">{% endif %}
+
+    {# champs relationnel, craft renvoie toujours un tableau. On a besoin du seul et premier élément. Ici navEnrtry vaut chaque fois l'entry à laquelle on a lié dans la section mainnav #}
+    {% set navEntry = item.navEntry.one() %}
+
+    {# on créée une variable currentEntry.
+       Cette variable contient l'entry active (celle de l'entry de la section single dans laquelle on se trouve)  #}
+    {% set currentEntry = entry %}
+
+    {# on crée les classes dont on a besoin #}
+    {% set currentClass = "" %}
+    {% set ariaCurrent = "" %}
+    
+    {# on teste si l'id de l'entry sur laquelle on boucle (item.navEntry) est égale à l'id de l'entry sur laquelle on est (entry.id), si c'est le cas, on change les valeurs #}
+    {% if currentEntry.id == navEntry.id %}
+      {% set currentClass = "is-current" %}
+      {% set ariaCurrent = 'aria-current="page"' %}
+    {% endif %}
+
+    <li class="c-footernav__item">
+      <a class="c-footernav__link  {{ currentClass }}"  {{ ariaCurrent|raw }} href="{{ navEntry.url }}">{{ item.navLabel }}</a>
+    </li>
+
+  {% if loop.last %}</ul>{% endif %}
+{% endfor %}

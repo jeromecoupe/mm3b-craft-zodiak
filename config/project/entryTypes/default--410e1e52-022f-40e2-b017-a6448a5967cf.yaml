@@ -1,0 +1,67 @@
+fieldLayouts:
+  dc88f7bd-6d9b-4efd-8a8a-151a8c0805fd:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3c469186-5674-429c-ad61-bea1991c5662
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f1ed4d7d-cc08-445c-9954-6a26f2cd2030 # Label
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6a845fd6-eedf-45a0-82b3-1ba981a3aefb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bec6ffbf-2728-4595-823d-79df92b04ced # Fichier
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 94b948f6-878e-4d36-ab4f-7f6161bf7beb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contenu
+        uid: c7ea7946-484b-4e87-8813-480cb67a9e55
+        userCondition: null
+handle: default
+hasTitleField: false
+name: 'Par défaut'
+section: b0160c90-c796-4c63-bf2e-c7e7dd888941 # Legal Navigation
+sortOrder: 1
+titleFormat: '{navLabel}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

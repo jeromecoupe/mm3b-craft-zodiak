@@ -6,7 +6,7 @@ fieldLayouts:
         elements:
           -
             elementCondition: null
-            fieldUid: f1ed4d7d-cc08-445c-9954-6a26f2cd2030 # label
+            fieldUid: f1ed4d7d-cc08-445c-9954-6a26f2cd2030 # Label
             instructions: null
             label: null
             required: true

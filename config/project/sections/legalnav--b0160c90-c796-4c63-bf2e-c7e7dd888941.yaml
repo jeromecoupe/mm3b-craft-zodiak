@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+handle: legalnav
+name: 'Legal Navigation'
+propagationMethod: all
+siteSettings:
+  bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: # Zodiak Craft
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: 3542e868-b6b5-4a56-81bf-f65bd2c26c36
+type: structure

@@ -1,9 +1,9 @@
 columnSuffix: kgpyhitv
 contentColumnType: string(64)
-fieldGroup: d455c486-17de-49b7-acf3-ada7205ba599 # mainnav
+fieldGroup: d455c486-17de-49b7-acf3-ada7205ba599 # navigation
 handle: navLabel
 instructions: 'Le texte de l''élément de navigation'
-name: label
+name: Label
 searchable: false
 settings:
   byteLimit: null

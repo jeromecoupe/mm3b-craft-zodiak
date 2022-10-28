@@ -1,8 +1,14 @@
-dateModified: 1666855687
+dateModified: 1666968511
 elementSources:
   craft\elements\Entry:
     -
+      disabled: false
       key: '*'
+      tableAttributes:
+        - section
+        - postDate
+        - expiryDate
+        - link
       type: native
     -
       heading: Pages
@@ -29,6 +35,9 @@ elementSources:
     -
       key: 'section:6203612d-7fff-4ca5-9430-dbe3222dacc9' # Main navigation
       type: native
+    -
+      key: 'section:b0160c90-c796-4c63-bf2e-c7e7dd888941' # Legal Navigation
+      type: native
 email:
   fromEmail: jercoupe@gmail.com
   fromName: 'Zodiak Craft'
@@ -41,6 +50,13 @@ fs:
       path: '@assetsBasePath/banners'
     type: craft\fs\Local
     url: '@assetsBaseUrl/banners/'
+  generalDocuments:
+    hasUrls: true
+    name: 'General documents'
+    settings:
+      path: '@assetsBasePath/general_documents'
+    type: craft\fs\Local
+    url: '@assetsBaseUrl/general_documents'
   projectsImages:
     hasUrls: true
     name: 'Projects Images'
@@ -70,6 +86,7 @@ meta:
     80cc93b0-0439-4e82-a632-4ab3b951e8d6: 'Home page' # Home page
     165ca52d-c6fc-40e8-9887-fbae6c318efe: 'Company name' # Company name
     0309a6b9-b120-4a62-a1ae-67fee16b1d3d: Title # Title
+    410e1e52-022f-40e2-b017-a6448a5967cf: 'Par défaut' # Par défaut
     471dc572-2e82-440b-abd2-aec6e84255d3: 'About Page' # About Page
     517b8a27-8132-48b9-90c7-f92ebeb16c52: Company # Company
     581bd5ac-855e-4584-a8c1-21d5127b3f89: City # City
@@ -86,22 +103,25 @@ meta:
     6203612d-7fff-4ca5-9430-dbe3222dacc9: 'Main navigation' # Main navigation
     a8dd715f-61cc-4242-8979-a521bb3153e4: Street # Street
     a9ea6874-b7c3-409e-bafa-f978616f563b: Number # Number
+    b0160c90-c796-4c63-bf2e-c7e7dd888941: 'Legal Navigation' # Legal Navigation
     b41bbb16-19dc-4889-ad3b-ae34998b0ca1: Image # Image
     bbe0c773-2fd8-4f50-bfdc-99df1c066c56: 'About Page' # About Page
     bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: 'Zodiak Craft' # Zodiak Craft
+    bec6ffbf-2728-4595-823d-79df92b04ced: Fichier # Fichier
     c5b0ac11-7c01-420a-833c-e50ecb4371f0: 'General Email' # General Email
     c35f1271-3443-46b5-8ea6-da21707ff837: homepage # homepage
     c50e71d2-363e-4e98-b4d8-75c91be685c0: 'Short Description' # Short Description
     d1eedcd7-399c-4e68-aeb9-780efad56703: 'Video Caption' # Video Caption
     d9dd4ea9-1687-4f88-81c1-aaabd2daf761: Intro # Intro
-    d455c486-17de-49b7-acf3-ada7205ba599: mainnav # mainnav
+    d455c486-17de-49b7-acf3-ada7205ba599: navigation # navigation
     d1427b85-dcab-4643-978f-dff265723cbc: 'Service Video' # Service Video
     d53147e0-6acd-439a-87f3-e5cc039c4b10: Postcode # Postcode
     df8aff31-ccae-4e6c-9049-58534ce8f646: Text # Text
     eff068e8-e5ad-43d8-a24f-75d9e8c179e7: 'Phone Display' # Phone Display
     f08509ef-a623-4169-a552-d925d0706204: Common # Common
-    f1ed4d7d-cc08-445c-9954-6a26f2cd2030: label # label
+    f1ed4d7d-cc08-445c-9954-6a26f2cd2030: Label # Label
     f27f7986-a625-40ee-9f1c-113471f5c190: 'Phone Machines' # Phone Machines
+    f720de7c-722b-4568-8204-257b82a4e754: 'General Documents' # General Documents
     f4255bdc-a1be-4f5f-8b1a-4ff363a027e8: 'Projects page' # Projects page
     f88162e2-7556-45b7-8e60-ee52abadd023: 'Zodiak Craft' # Zodiak Craft
     faa3d051-bcd0-473e-8e6b-f099df52af16: Entry # Entry
