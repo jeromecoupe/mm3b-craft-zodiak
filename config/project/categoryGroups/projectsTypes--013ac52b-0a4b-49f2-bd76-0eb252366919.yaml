@@ -1,0 +1,46 @@
+defaultPlacement: end
+fieldLayouts:
+  f0662d91-88d3-45e2-8975-21ded80ae976:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: a484f5c6-6bf9-4190-a1ae-bfe67fc6b6d4
+            userCondition: null
+            warning: null
+            width: 100
+        name: Contenu
+        uid: 37bba22e-07ad-462f-b649-ada385c05062
+        userCondition: null
+handle: projectsTypes
+name: 'Projects Types'
+siteSettings:
+  bdc6cd0e-2a3a-4102-b579-2affcb3e3bff: # Zodiak Craft
+    hasUrls: true
+    template: projects/index.twig
+    uriFormat: 'projects/{slug}'
+structure:
+  maxLevels: 1
+  uid: 6a17052b-072b-469d-ab4b-dcd08244b813

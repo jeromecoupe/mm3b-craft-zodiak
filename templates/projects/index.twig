@@ -1,10 +1,113 @@
 {% extends "_layouts/base.twig" %}
 
+{# 
+ATTENTION: on charge le même template pour deux structure d'URL différentes (deux routes pour un même template)
+
+  - quand l'URL est "/projects" > correspond à une entry dans une section de type single (projectPage) > variable "entry" existe automatiquement mais pas une variable "category"
+  - quand l'URl est "/projects/{slug}" > correspond à une category > variable "entry" n'existe pas automatiquement, mais bien une variable "category"
+
+On va devoir aider Craft un petit peu en s'assurant que la variable entry soit toujours définie quelle que soit la route
+#}
+
+{% set entry = entry ?? craft.entries()
+  .section("projectsPage")
+  .one() %}
+
 {% block content %}
 
   <div class="c-pagesection  c-pagesection--brand">
     <div class="l-container">
       <h1 class="c-pagetitle">{{ entry.pageBigtitle }}</h1>
+    </div>
+  </div>
+  
+  <div class="c-pagesection">
+    <div class="l-container">
+
+      <div class="c-categories">
+        <nav>
+          <h2 class="c-categories__title">Types of work</h2>
+          {# get all projects ids (used for relation with categories) #}
+          {% set allProjectsIds = craft.entries()
+            .section("projects")
+            .ids() %}
+
+          {# get all categories that are related to a project ID (ne pas afficher les catégories vides) #}
+          {% set allTypes = craft.categories()
+            .group("projectsTypes")
+            .orderBy("title ASC")
+            .relatedTo(allProjectsIds)
+            .all() %}
+
+          {# display all categories #}
+          {% for cat in allTypes %}
+            {% if loop.first %}<ul class="c-catlist">{% endif %}
+
+              {% if loop.first %}
+                <li class="c-catlist__item">
+                  <a class="c-catlist__link" href="{{ entry.url }}">All types</a>
+                </li>
+              {% endif %}
+
+              <li class="c-catlist__item">
+                <a class="c-catlist__link" href="{{ cat.url }}">{{ cat.title }}</a>
+              </li>
+
+            {% if loop.last %}</ul>{% endif %}
+          {% endfor %}
+        </nav>
+      </div>
+
+      {# 
+        chopper les projets
+        - dans le contexte de pagination: pas de all() de one() etc
+        - dans le contexte de paginatin: limit === combien d'items par page 
+      #}
+      {% set allProjects = craft.entries()
+        .section("projects")
+        .orderBy("postDate ASC")
+        .limit(12) %}
+
+      {# 
+      - si on est sur une route de catégorie, craft va automatiquement nous définir une variable "category". 
+      - Si cette variable existe, nous devons ajouter un paramètre à notre query: ne prendre que les projets liés à la catégorie définie  #}
+      {% if category is defined %}
+        {% do allProjects.relatedTo(category) %}
+      {% endif %}
+
+      {#
+        Sur base d'une query (ici les entries projets), le tag paginate nous donne:
+        - un objet pour faire notre interface de pagination
+        - un tableau d'objets (entries) découpéL. Chaque découpe contient le nombre d'item souhaité par page (paramètre limit)
+      #}
+      {% paginate allProjects as pagination, projects %}
+      
+      {% for item in projects %}
+        {% if loop.first %}<ul class="l-grid  l-grid--2cols@small  l-grid--3cols@medium  l-grid--4cols@large">{% endif %}
+          <li>
+            {% include "_components/projectCard.twig" with {
+              title: item.title,
+              description: item.projectShortDescription,
+              image: item.projectImage.one(),
+              url: item.url
+            } only %}
+          </li>
+        {% if loop.last %}</ul>{% endif %}
+        {% else %}
+          <p>No projects found</p>
+      {% endfor %}
+
+      {# 
+        pagination
+        - composant auquel on passe l'objet pagination reçu du tag paginate
+        - va permettre de créer l'interface de pagination
+        - doc: https://craftcms.com/docs/4.x/dev/tags.html#paginate
+        - objet: https://craftcms.com/docs/4.x/dev/tags.html#the-pageinfo-variable
+      #}
+      {% include "_components/pagination.twig" with {
+        pagination: pagination
+      } only %}
+
     </div>
   </div>
 

@@ -1,4 +1,4 @@
-dateModified: 1666256933
+dateModified: 1666855687
 elementSources:
   craft\elements\Entry:
     -
@@ -64,6 +64,7 @@ meta:
     7e8bdc04-0bb6-4def-b62f-349d7766c475: Intro # Intro
     8d2ee940-2eba-4141-9dda-82288d99eb01: Image # Image
     9dbe4037-2176-4a8c-b1f4-998cf2fcafdd: Intro # Intro
+    013ac52b-0a4b-49f2-bd76-0eb252366919: 'Projects Types' # Projects Types
     34b5023c-f01f-462d-a4ee-1d71f8cf89fd: 'Image Caption' # Image Caption
     56b3e828-802f-46ac-9b2a-30c377dcac1b: 'Par défaut' # Par défaut
     80cc93b0-0439-4e82-a632-4ab3b951e8d6: 'Home page' # Home page
@@ -77,6 +78,7 @@ meta:
     999a2bfa-e35c-428b-8918-6edf6056c80d: 'Twitter Url' # Twitter Url
     3409f5cd-9756-4836-abd4-a07c4ab48248: Title # Title
     8830f2a6-b3db-4b49-9842-13a44ae5491e: 'project body' # project body
+    09079bae-c71f-4d92-ae5d-a4163341a5a7: Type # Type
     63660a67-33fa-414c-9fc1-23e27ce475f9: 'Instagram Url' # Instagram Url
     086529c0-74a3-4c9e-ab52-0485965c1095: globals # globals
     87262a21-e415-4303-99dd-b6cf05760104: 'Social media' # Social media

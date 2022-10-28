@@ -78,6 +78,18 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            elementCondition: null
+            fieldUid: 09079bae-c71f-4d92-ae5d-a4163341a5a7 # Type
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6fbf5395-7aee-4893-a244-32deba00e1b0
+            userCondition: null
+            warning: null
+            width: 100
         name: Contenu
         uid: 3d9fea44-b0ae-4628-96dd-1f94e965888a
         userCondition: null

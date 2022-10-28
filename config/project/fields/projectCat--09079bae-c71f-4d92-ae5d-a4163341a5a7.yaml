@@ -1,0 +1,25 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: ff26caa9-dbab-4514-b242-b2284d2d27df # projects
+handle: projectCat
+instructions: null
+name: Type
+searchable: true
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: null
+  localizeRelations: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showSiteMenu: true
+  source: 'group:013ac52b-0a4b-49f2-bd76-0eb252366919' # Projects Types
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

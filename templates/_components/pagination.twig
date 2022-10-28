@@ -1,0 +1,34 @@
+{# -----------------------------
+variables
+----------------------------- #}
+
+{% set pagination = pagination ?? null %}
+
+{# -----------------------------
+template
+----------------------------- #}
+
+{# afficher si l'objet pagination existe / n'est pas null et si le nombre total de pages est supérieur à 1 (cela dépend du paramètre limit) #}
+{% if pagination and pagination.totalPages > 1 %}
+  <nav aria-label="pagination">
+    <ul class="c-pagination">
+      {% if pagination.prevUrl %}
+        <li class="c-pagination__item"><a class="c-pagination__first" href="{{ pagination.firstUrl }}">First</a></li>
+      {% endif %}
+
+      {% for page, url in pagination.getPrevUrls(1) %}
+        <li class="c-pagination__item"><a class="c-pagination__link" href="{{ url }}">{{ page }}</a></li>
+      {% endfor %}
+
+      <li class="c-pagination__item"><a href="#" class="c-pagination__link  is-current" aria-current="page">{{ pagination.currentPage }}</a></li>
+
+      {% for page, url in pagination.getNextUrls(1) %}
+          <li class="c-pagination__item"><a class="c-pagination__link" href="{{ url }}">{{ page }}</a></li>
+      {% endfor %}
+      
+      {% if pagination.nextUrl %}
+        <li class="c-pagination__item"><a class="c-pagination__last" href="{{ pagination.lastUrl }}">Last</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
